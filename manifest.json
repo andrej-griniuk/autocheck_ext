@@ -1,0 +1,35 @@
+{
+  "name" : "AutoCheck",
+  "version" : "1.0",
+  "description" : "AutoCheck",
+  "permissions": [
+    "browsingData",
+    "declarativeContent"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.carsales.com.au/*", "https://www.gumtree.com.au/*"],
+      "css": ["css/style.css"],
+      "js": ["js/jquery.js", "js/app.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Auto Check",
+    "default_icon": {
+      "128": "img/icon128.png",
+      "48": "img/icon48.png",
+      "32": "img/icon32.png"
+    }
+  },
+  "icons": {
+    "128": "img/icon128.png",
+    "48": "img/icon48.png",
+    "32": "img/icon32.png"
+  },
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+  "manifest_version": 2
+}
