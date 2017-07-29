@@ -115,7 +115,7 @@ $(function(){
 
             $('#autocheck-is-rolled-back', $container)
                 .text(data.is_rolled_back ? 'Yes' : 'No')
-                .addClass(data.is_encumbered ? 'autocheck-red' : 'autocheck-green');
+                .addClass(data.is_rolled_back ? 'autocheck-red' : 'autocheck-green');
 
             if (!data.is_encumbered && !data.is_stolen && !data.is_rego_expired && !data.is_damaged && !data.is_rolled_back) {
                 $container.addClass('autocheck-bg-green');
